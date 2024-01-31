@@ -6,10 +6,12 @@ const ApiUrl = "https://swapi.dev/api/starships/"
 const StarshipsComponent = () => {
 
     const [starships, setStarships] = useState([]);
+    const [page, setPage] = useState(1);
+
 
     const fetchStarships = async () => {
 
-        const response = await fetch(ApiUrl);
+        const response = await fetch(`${ApiUrl}?page=${page}`);
         const data = await response.json();
         // setStarships(data.results)
 
@@ -22,11 +24,16 @@ const StarshipsComponent = () => {
         );
 
         setStarships(mapResults)
-    }
+    };
+
+
+    const changeNumberPage = (action) => {
+        action === "increase" ? setPage(page + 1) : setPage(page - 1);
+    };
 
     useEffect(() => {
         fetchStarships();
-    }, []);
+    }, [page]);
     
     
 
@@ -46,7 +53,22 @@ const StarshipsComponent = () => {
                 </Link>
                     
             </div>
-        ))}
+       ))}
+               <div className="flex justify-around  content-center">
+        <button
+          className="w-28 rounded-lg border-2 text-zinc-400 border-zinc-400 hover:text-white p-3 m-5 "
+          onClick={() => changeNumberPage("decrease")}
+        >
+          go back
+        </button>
+                
+        <button
+          className="w-28 rounded-lg border-2 text-zinc-400 border-zinc-400 hover:text-white p-3 m-5 border-1"
+          onClick={() => changeNumberPage("increase")}
+        >
+          view more
+        </button>
+      </div>
         
     </>
   )
