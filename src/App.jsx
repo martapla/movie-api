@@ -6,9 +6,10 @@ function App() {
  
 
   return (
-    <>  <Navbar />
+    <>
+      <Navbar />
       
-        <StarshipsComponent />
+         <StarshipsComponent />
     </>
   )
 }

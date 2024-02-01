@@ -5,12 +5,14 @@ import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import StarshipsComponent from './components/StarshipsComponent.jsx'
 import StarshipCardComponent from './components/StarshipCardComponent.jsx'
+import Home from './components/Home.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={ <App /> } />
+        <Route path='/' element={ <Home /> } />
+        <Route path='/main' element={ <App /> } />
         <Route path='/starships' element={<StarshipsComponent />} />
         <Route path='/starships/:shipId' element={<StarshipCardComponent />}/>
       </Routes>
