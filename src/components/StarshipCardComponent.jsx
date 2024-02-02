@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Navbar from './Navbar'
 
 const StarshipCardComponent = () => {
     const params = useParams()
@@ -19,7 +20,8 @@ const StarshipCardComponent = () => {
     },[])
 
     return (
-      <>
+        <>
+            <Navbar />
         <div>StarshipCardComponent</div>
      
             <div className='p-2 border border-2 border-white rounded-md bg-gray-200 cursor-pointer'>

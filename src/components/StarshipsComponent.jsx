@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const ApiUrl = "https://swapi.dev/api/starships/"
 
@@ -38,8 +39,9 @@ const StarshipsComponent = () => {
     
 
     return (
-    <>
-       <header className="font-bold text-xl mb-6 uppercase text-center">Starships</header>
+      <>
+         <Navbar />
+       <header className="font-bold text-xl mb-6 uppercase text-center">Starships List</header>
             
        {starships.map((ship, index) => (
                
