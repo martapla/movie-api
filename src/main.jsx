@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import StarshipsComponent from './components/StarshipsComponent.jsx'
 import StarshipCardComponent from './components/StarshipCardComponent.jsx'
 import Home from './components/Home.jsx'
+import Login from './components/Login.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -12,7 +13,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={ <Home /> } />
         <Route path='/starships' element={<StarshipsComponent />} />
+        {/* <Route path='/starships' element={localStorage.getItem ('user') ?<StarshipsComponent /> : <Login />} /> */}
         <Route path='/starships/:shipId' element={<StarshipCardComponent />}/>
+        <Route path='/login' element={<Login />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

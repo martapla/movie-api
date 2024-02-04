@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@200;300;400;500;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,6 +12,42 @@
 }
 
 body {
+  font-family: 'Exo 2', sans-serif; 
   background-color: lightgrey;
   padding:20px;
+  background-image: url(assets/background.space.jpeg);
+  background-size: cover; 
+  background-repeat:repeat; 
+  background-position: center center; 
+  min-width: 320px;
+}
+
+@keyframes twinklingStars {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 10;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.twinkling-star {
+  position: relative;
+  display: inline-block;
+  width: 1.5px;
+  height: 1.5px;
+  background-color: #f3dd36;
+  border-radius: 50%;
+  animation: twinklingStars 3s linear infinite; 
+}
+
+.star-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

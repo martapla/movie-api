@@ -40,37 +40,39 @@ const StarshipsComponent = () => {
 
     return (
       <>
-         <Navbar />
-       <header className="font-bold text-xl mb-6 uppercase text-center">Starships List</header>
+        <Navbar />
+        
+       <header className="font-Exo2 md:text-lg md:text-center mb-4 uppercase text-yellow-500"> - Starships List -</header>
             
        {starships.map((ship, index) => (
                
-            <div className="w-90 mx-auto mb-4" key={index}>
-
-                <Link  to={`/starships/${ship.id}`}>
-                   <div className='p-2 border border-2 border-white rounded-md bg-gray-200 cursor-pointer'>
-                       <h1 className='font-bold text-sm md:text-md uppercase'>{ship.name}</h1>
-                       <h3 className=' text-sm md:text-md'>{ship.model}</h3>
-                    </div>
-                </Link>
+          <div className="w-90 md:w-3/4 mx-auto mb-4" key={index}>
+           
+           <Link  to={`/starships/${ship.id}`}>
+              <div className='p-2 border border-2 border-gray-300  rounded-md bg-gray-800 cursor-pointer'>
+                  <h1 className=' text-sm md:text-md uppercase text-yellow-500 font-jedi-outline font-semibold'>{ship.name}</h1>
+                  <h3 className=' text-sm md:text-md text-white'>{ship.model}</h3>
+              </div>
+           </Link>
                     
-            </div>
+          </div>
        ))}
-               <div className="flex justify-around  content-center">
-        <button
-          className="w-28 rounded-lg border-2 text-zinc-400 border-zinc-400 hover:text-white p-3 m-5 "
-          onClick={() => changeNumberPage("decrease")}
-        >
-          go back
-        </button>
-                
-        <button
-          className="w-28 rounded-lg border-2 text-zinc-400 border-zinc-400 hover:text-white p-3 m-5 border-1"
-          onClick={() => changeNumberPage("increase")}
-        >
-          view more
-        </button>
-      </div>
+               
+        <div className="flex justify-around content-center">
+            <button
+              className="w-28 rounded-lg border-2 text-zinc-400 border-zinc-400 hover:text-yellow-500 hover:border-yellow-500 p-3 m-5 "
+              onClick={() => changeNumberPage("decrease")}
+            >
+              go back
+            </button>
+                    
+            <button
+              className="w-28 rounded-lg border-2 text-zinc-400 border-zinc-400 hover:text-yellow-500 hover:border-yellow-500 p-3 m-5 border-1"
+              onClick={() => changeNumberPage("increase")}
+            >
+              view more
+            </button>
+        </div>
         
     </>
   )
