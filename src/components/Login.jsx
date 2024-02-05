@@ -6,16 +6,13 @@ const Login = () => {
         <Navbar />
           
         <form className='flex items-center justify-center'>
-            <div className="bg-gray-900 border border-2 border-gray-300 py-6 rounded-md px-10 shadow-md">
-                <div className="space-y-4 mt-6">
+            <div className="bg-gray-900 border border-2 border-gray-300 py-6 rounded-md px-4 md:px-10  shadow-md">
+                <div className="space-y-4 md:mt-6">
                 
                     <div className="w-full">
                         <input type="text" placeholder="username" className="px-4 py-2 bg-gray-200 rounded-md" />
                     </div>
-                    {/* <div className="w-full">
-                        <input type="text" placeholder="email" className="px-4 py-2 bg-gray-50" />
-                    </div> */}
-                        
+                    
                     <div className="w-full">
                         <input type="password" placeholder="password" className="px-4 py-2 bg-gray-200 rounded-md" />
                     </div>
