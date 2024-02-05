@@ -49,7 +49,7 @@ const StarshipsComponent = () => {
           <div className="w-90 md:w-3/4 mx-auto mb-4" key={index}>
            
            <Link  to={`/starships/${ship.id}`}>
-              <div className='p-2 border border-2 border-gray-300  rounded-md bg-gray-800 cursor-pointer'>
+              <div className='p-2 border border-2 border-gray-300  rounded-md bg-gray-800 cursor-pointer hover:bg-gray-600'>
                   <h1 className=' text-sm md:text-md uppercase text-yellow-500 font-jedi-outline font-semibold'>{ship.name}</h1>
                   <h3 className=' text-sm md:text-md text-white'>{ship.model}</h3>
               </div>

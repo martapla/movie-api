@@ -12,7 +12,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="pl-3 hover:text-yellow-500">
-            <Link to = { "/login"}>
+            <Link to = { "/signup"}>
               Sign Up
             </Link>
           </li>
