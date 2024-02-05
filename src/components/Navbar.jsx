@@ -31,7 +31,8 @@ const Navbar = () => {
             </Link>
           </li>
 
-          <li className="pl-4 hover:text-yellow-500">
+          <li className="pl-4 hover:text-yellow-500
+          ">
             <Link to = { "/starships"}>
               Starships
             </Link>
