@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
@@ -44,7 +45,7 @@ const StarshipCardComponent = () => {
                     <h4>- Lenght: <span className=" text-xs md:text-lg font-normal text-white pb-6'">{info.length} </span></h4>
                     <h4>- Crew:<span className=" text-xs md:text-lg font-normal text-white pb-6'"> {info.crew}</span></h4>
                 </div>
-         
+               
             </div>
         
      </>

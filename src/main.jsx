@@ -14,7 +14,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path='/' element={ <Home /> } />
         <Route path='/starships' element={<StarshipsComponent />} />
-        {/* <Route path='/starships' element={localStorage.getItem ('user') ?<StarshipsComponent /> : <Login />} /> */}
+        {/* <Route path='/starships'
+          element={localStorage.getItem('username') && localStorage.getItem('password') ? <StarshipsComponent /> : <Login />} />  */}
         <Route path='/starships/:shipId' element={<StarshipCardComponent />}/>
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<SignUp />}/>
