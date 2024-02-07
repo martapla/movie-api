@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import yellow from "/src/assets/logo-yellow.png"
 
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
       </div>
      
       <div className="flex justify-center">
-        <img src="./src/assets/logo-yellow.png" className="w-60 mt-[-40px]" alt="logo"/>
+        <img src={yellow} className="w-60 mt-[-40px]" alt="logo"/>
       </div>
           
       <div className="flex justify-center text-center uppercase text-white mt-[-20px]">
