@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import white from ".assets/white-logo.jpeg"
+import white from "/src/assets/white-logo.png"
 
 const Home = () => {
     return (
