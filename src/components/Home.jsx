@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import white from ".assets/white-logo.jpeg"
 
 const Home = () => {
     return (
@@ -20,7 +21,7 @@ const Home = () => {
             </div>
 
           <div className="flex justify-center">
-              <img src="./src/assets/nose.jpeg" className="w-80 mt-20" alt="logo" />
+              <img src={white} className="w-80 mt-20" alt="logo" />
               
           </div>
       </div>      
