@@ -3,6 +3,7 @@
 import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
+import Pilots from './Pilots'
 
 const StarshipCardComponent = () => {
     const params = useParams()
@@ -47,9 +48,16 @@ const StarshipCardComponent = () => {
                 </div>
                
             </div>
-        
-     </>
-  )
+            <h2 className='text-white'>Starship Pilots</h2>
+            
+            <div className="text-white">
+                {info.pilots && info.pilots.length > 0
+                    ? <Pilots starshipPilots={info.pilots} />
+                    : "There are no related pilots for this starship"}
+            </div>
+           
+        </>
+    )
 }
 
 export default StarshipCardComponent
