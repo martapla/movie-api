@@ -4,17 +4,28 @@ import { useState, useEffect } from 'react';
 const Pilots = ({ starshipPilots }) => {
   const [pilotList, setPilotList] = useState([]);
 
-  const fetchPilots = async () => {
-    const promises = starshipPilots.map(url => fetch(url).then(response => response.json()));
-    const pilotsData = await Promise.all(promises);
-    setPilotList(pilotsData);
-  };
-
   useEffect(() => {
-    if (starshipPilots && starshipPilots.length > 0) {
-      fetchPilots();
-    }
+
+    const fetchPilots = async () => {
+       
+        const promises = starshipPilots.map(async (pilotUrl) => {
+            const response = await fetch(pilotUrl);
+            const data = await response.json();
+            const urlSplitted = pilotUrl.split('/');
+            const pilotId = urlSplitted.at(-2);
+            data.id = pilotId;
+            data.imageUrl = `https://starwars-visualguide.com/assets/img/characters/${pilotId}.jpg`;
+            return data;
+        });
+
+        const pilotsData = await Promise.all(promises);
+        setPilotList(pilotsData);
+    };
+
+ 
+    fetchPilots();
   }, [starshipPilots]);
+
 
   return (
       <>
@@ -28,7 +39,7 @@ const Pilots = ({ starshipPilots }) => {
                 {pilot.name}</h1>
                     
                 <div>
-                    <img src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`} alt={pilot.name} className='w-50 border border-4 border-white border-gray-200 rounded-md mx-auto'/>
+                    <img src={`https://starwars-visualguide.com/assets/img/characters/${pilot.id}.jpg`} alt={pilot.name} className='w-50 border border-4 border-white border-gray-200 rounded-md mx-auto'/>
                 </div>
                  
                 <div className='mt-2 text-sm md:text-lg text-yellow-500'>

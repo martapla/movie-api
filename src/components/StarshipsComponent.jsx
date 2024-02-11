@@ -19,7 +19,7 @@ const StarshipsComponent = () => {
         const mapResults = data.results.map(
             result => {
                 const urlSplitted = result.url.split('/')
-                result.id = urlSplitted.at(-2) //asignamos valor de propiedad 'id'.
+                result.id = urlSplitted.at(-2) //asignamos a result una key id.
                 return result
             }
         );
