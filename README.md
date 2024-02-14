@@ -47,7 +47,7 @@ The list of ships with detailed information for each one should be shown.
 - Displaying the login and register result in the console will be satisfactory.
 
 ### 📍 step 7
-- Implement a `pilot card` with theis respective details. 
+- Implement a `pilot card` with their respective details. 
 - It will be displayed into the file of each ship.
 
 #  🎠 Style
